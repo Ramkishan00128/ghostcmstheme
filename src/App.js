@@ -1,41 +1,37 @@
 import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+import './style.css';
+import Header from './components/Header/Header';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import About from './components/About';
+import Project from './components/Main/Project/Project';
+import Resource from './components/Main/Resource';
+
+import Home from './components/Home';
+import Team from './components/Main/Team/Team';
+import Footer from './components/Footer.js/Footer';
+import Register from './components/Auth/Register';
+import Login from './components/Auth/Login';
+import Contact from './components/Contact';
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
-    </ChakraProvider>
+    <>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/project" element={<Project />} />
+          <Route path="/resource" element={<Resource />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </>
   );
 }
 

@@ -1,0 +1,10 @@
+.navbar a {
+  text-decoration: none;
+}
+.active {
+  color: #ff1a75;
+}
+
+a:hover {
+  color: #ff1a75;
+}
