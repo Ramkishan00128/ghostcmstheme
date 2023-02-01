@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.acc7dc10.css","mappings":"AAAA,UACE,oBACF,CAKA,gBACE,aACF","sources":["style.css"],"sourcesContent":[".navbar a {\r\n  text-decoration: none;\r\n}\r\n.active {\r\n  color: #ff1a75;\r\n}\r\n\r\na:hover {\r\n  color: #ff1a75;\r\n}\r\n"],"names":[],"sourceRoot":""}
